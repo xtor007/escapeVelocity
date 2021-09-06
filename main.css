@@ -1,0 +1,127 @@
+* {
+  font-family: helvetica, suns-sans-serif;
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+p {
+  text-indent: 20px;
+}
+
+h5 {
+  text-align: center;
+  text-indent: 20px;
+}
+
+img {
+  width: 447px;
+  height: 264px;
+}
+
+a {
+  color: black;
+}
+
+.container12345 {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.container1 {
+  position: absolute;
+  width: 15%;
+  background-color: green;
+  height: 100%;
+  color: black;
+}
+
+.container2345 {
+  position: absolute;
+  right: 0%;
+  width: 85%;
+  height: 100%;
+
+}
+
+.container2 {
+  position: absolute;
+  width: 100%;
+  background-color: #ADFF2F;
+  max-height: 15%;
+  color: black;
+  padding-top: 3.5%;
+}
+
+.conteinerX {
+  position: absolute;
+  height: 35%;
+  width: 15%;
+  background-color: white;
+  top: 0%;
+  margin-left: 60%;
+  margin-top: 0.5%;
+  color: black;
+  text-align: center;
+}
+
+.container345 {
+  position: absolute;
+  max-width: 100%;
+  min-width: 100%;
+  height: 85%;
+  bottom: 0%;
+}
+
+.container35 {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+}
+
+.container3 {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: #00FF00;
+  color: red;
+}
+
+.container5 {
+  position: absolute;
+  max-width: 100%;
+  height: 90%;
+  bottom: 0%;
+  background-color: white;
+  padding: 10px
+}
+
+.container4 {
+  position: absolute;
+  right: 0%;
+  width: 30%;
+  height: 100%;
+  background-color: green;
+  color: black;
+}
+
+.container6 {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: #ADFF2F;
+  color: black;
+}
+
+.conteinerY {
+  position: absolute;
+  height: 35%;
+  width: 30%;
+  background-color: white;
+  margin-left: 0.5%;
+  margin-top: 10%;
+  color: black;
+  text-align: center;
+}
