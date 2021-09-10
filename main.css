@@ -24,6 +24,10 @@ a {
   color: black;
 }
 
+.container2 p {
+  padding-left: 100px;
+}
+
 .container12345 {
   position: relative;
   width: 100%;
@@ -36,6 +40,7 @@ a {
   background-color: green;
   height: 100%;
   color: black;
+  text-align: center;
 }
 
 .container2345 {
@@ -53,6 +58,9 @@ a {
   max-height: 15%;
   color: black;
   padding-top: 3.5%;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
 }
 
 .conteinerX {
@@ -87,6 +95,7 @@ a {
   height: 10%;
   background-color: #00FF00;
   color: red;
+  text-align: right;
 }
 
 .container5 {
@@ -95,7 +104,8 @@ a {
   height: 90%;
   bottom: 0%;
   background-color: white;
-  padding: 10px
+  padding: 10px;
+  text-align: left;
 }
 
 .container4 {
@@ -105,6 +115,7 @@ a {
   height: 100%;
   background-color: green;
   color: black;
+  text-align: center;
 }
 
 .container6 {
@@ -113,6 +124,7 @@ a {
   height: 30%;
   background-color: #ADFF2F;
   color: black;
+  text-align: right;
 }
 
 .conteinerY {
