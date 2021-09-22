@@ -27,7 +27,13 @@ a {
 }
 
 .container2 p {
-  padding-left: 100px;
+  width: 70%;
+
+}
+
+.container6 ol {
+  width: 70%;
+
 }
 
 .container12345 {
@@ -57,24 +63,28 @@ a {
 
 .container2 {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   background-color: #ADFF2F;
   min-height: 20%;
   color: black;
-  padding-top: 10%;
+  /* padding-top: 10%; */
+  padding-left: 10px;
   text-align: left;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .conteinerX {
-  position: absolute;
-  min-height: 35%;
+  position: relative;
+  height: 35%;
   width: 15%;
   background-color: white;
   top: 0%;
-  margin-left: 60%;
-  margin-top: 0.5%;
+  /* margin-left: 60%; */
+  /* margin-top: 0.5%; */
+  margin-right: 2%;
   color: black;
   text-align: center;
 }
@@ -130,21 +140,26 @@ a {
 
 .container6 {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   min-height: 30%;
   background-color: #ADFF2F;
   color: black;
   text-align: right;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 20px;
 }
 
 .conteinerY {
-  position: absolute;
-  min-height: 35%;
-  width: 30%;
+  position: relative;
+  height: 35%;
+  width: 20%;
   background-color: white;
-  margin-left: 0.5%;
-  margin-top: 10%;
+  /* margin-left: 0.5%;
+  margin-top: 10%; */
   color: black;
   text-align: center;
 }
