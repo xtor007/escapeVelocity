@@ -7,8 +7,24 @@ document.addEventListener('DOMContentLoaded', function () {
   async function buttonClick(e) {
     e.preventDefault();
     let countError = isNorm(form);
+    let formData = new FormData(form);
     if (countError===0) {
-
+      form.classList.add('_sending');
+      let response = await fetch('send.php'), {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        //alert(result.massage);
+        //formPreview.innerHTML = '';
+        form.reset();
+        form.classList.remove('_sending');
+      } else {
+        let email = document.querySelectorAll('._email');
+        addError(email[0]);
+        form.classList.remove('_sending');
+      }
     }
   }
 
