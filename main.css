@@ -9,6 +9,10 @@
   border-radius: 5px;
 }
 
+.formInput._error{
+  box-shadow: 0 0 15px red;
+}
+
 .formButton {
   background-color: #7B68EE;
   color: white;
