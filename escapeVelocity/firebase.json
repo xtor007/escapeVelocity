@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "escapeVelocity",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
