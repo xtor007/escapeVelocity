@@ -11,10 +11,11 @@
   $mail -> IsHTML(true);
 
   $mail -> setForm('tolxpams@gmail.com','Anatoliy');
-  $mail -> addAddress($_POST['email']);
+  $mail -> addAddress('tolxpams@gmail.com');
   $mail -> Subject = 'escape velocity';
 
-  $body = '<p>'.$_POST['name'].'! Welcome to the site about escape velocity</p>';
+  $body = '<p>Name:'.$_POST['name'].'</p>';
+  $body .= '<p>E-mail:'.$_POST['email'].'</p>';
 
   $mail -> Body = $body;
 ?>
