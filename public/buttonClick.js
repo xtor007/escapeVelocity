@@ -7,12 +7,31 @@ document.addEventListener('DOMContentLoaded', function () {
   async function buttonClick(e) {
     e.preventDefault();
     let countError = isNorm(form);
-    //let formData = new FormData(form);
-    // if (countError===0) {
-    //   form.classList.add('_sending');
+    if (countError===0) {
+      //let formData = new FormData(form);
+      form.classList.add('_sending');
+      const nodemailer = require('nodemailer');
+      let transporter = nodemailer.createTransport({
+        host: "smtp.mailgun.org",
+        port: 587,
+        secure: false,
+        auth: {
+          user: 'a.khramchenko.ip01@gmail.com',
+          path: 't2o7l0x5',
+        },
+      });
+      let result = await transporter.sendMail ({
+        from: 'a.khramchenko.ip01@gmail.com',
+        to: 'tolxpams@gmail.com',
+        subject: 'escape velocity',
+        text: 'hello',
+        // html: 'hello',
+        // attachments: [],
+      });
+      console.log(result);
       // let response = await fetch('send.php'), {
       //   method: 'POST',
-      //   body: formData
+      //   body: FormData(form)
       // });
       // if (response.ok) {
       //   let result = await response.json();
@@ -22,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       //   let email = document.querySelectorAll('._email');
       //   addError(email[0]);
       //   form.classList.remove('_sending');
-      // }
-    //}
+      }
+    }
   }
 
   function isNorm(form) {
