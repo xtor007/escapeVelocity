@@ -15,7 +15,6 @@ ev.use('/parabola.html', express.static(__dirname + '/html/parabola.html'))
 ev.use('/apparatus.html', express.static(__dirname + '/html/apparatus.html'))
 ev.use('/loading3.gif', express.static(__dirname + '/img/loading3.gif'))
 ev.use('/img.jpg', express.static(__dirname + '/img/img.jpg'))
-//ev.use('main.css', express.static(__dirname + '/main.css'))
 
 
 ev.post('/form',(req,res) => {
@@ -29,7 +28,7 @@ ev.post('/form',(req,res) => {
       from: '<a.khramchenko.ip01@gmail.com>',
       to: 'tolxpams@gmail.com',
       subject: 'escape velocity',
-      text: 'hello'
+      text: `name: ${req.body.name}\nemail: ${req.body.email}`
     }
     mailer(message)
     res.redirect('/form')
