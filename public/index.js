@@ -19,34 +19,21 @@ ev.use('/img.jpg', express.static(__dirname + '/img/img.jpg'))
 
 
 ev.post('/form',(req,res) => {
-
-  const input = req.body.email
-  //remError(input);
-  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)) {
-    //addError(input)
-    console.log('hui')
+  console.log(req.body.email)
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(req.body.email)) {
+    res.send('error email')
+  } else if (req.body.name === '') {
+    res.send('error name')
+  } else {
+    const message = {
+      from: '<a.khramchenko.ip01@gmail.com>',
+      to: 'tolxpams@gmail.com',
+      subject: 'escape velocity',
+      text: 'hello'
+    }
+    mailer(message)
+    res.redirect('/form')
   }
-  if (input.value === '') {
-    console.log('hui2')
-  }
-  const message = {
-    from: '<a.khramchenko.ip01@gmail.com>',
-    to: 'tolxpams@gmail.com',
-    subject: 'escape velocity',
-    text: 'hello'
-  }
-  mailer(message)
-  // if (req..classList.contains('_email')) {
-  //   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)) {
-  //     addError(input);
-  //
-  //   }
-  // } else if (input.classList.contains('_name')) {
-  //   if (input.value === '') {
-  //     addError(input);
-  //   }
-  // }
-  res.redirect('/form')
 })
 
 ev.get('/form',(req,res) => {
@@ -58,20 +45,3 @@ ev.get('/main.css', function(req, res) {
 })
 
 ev.listen(PORT, () => console.log(`http://localhost:${PORT}/form`))
-
-  // function isNorm(form) {
-  //   let countError = 0;
-  //   let formReq = document.querySelectorAll('._req');
-  //
-  //   return countError;
-  // }
-
-  function addError(input) {
-    input.parentElement.classList.add('_error');
-    input.classList.add('_error');
-  }
-
-  function remError(input) {
-    input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
-  }
